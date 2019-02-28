@@ -1,13 +1,14 @@
 $(document).ready(function () {
-
-    $('.carousel').carousel();
-
+    //hiding counter on the form; overriding materialize property
+    $("span." + "character-counter").hide();
 
     // Initial Values
     var name = "";
     var email = "";
     var message = "";
     // Capture Button Click
+
+
     $("#contactMe").on("click", function (event) {
         event.preventDefault();
 

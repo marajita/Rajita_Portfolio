@@ -7,12 +7,16 @@ var express = require("express");
 var router = express.Router();
 
 
-  router.get("/", function(req, res) {
-      res.render("index");
-  });
-  
+router.get("/", function (req, res) {
+  res.render("index");
+});
 
-  /* // Load example page and pass in an example by id
+router.get("/resume", function (req, res) {
+  res.render("resume");
+});
+
+
+/* // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(
       dbExample
@@ -23,10 +27,10 @@ var router = express.Router();
     });
   });
  */
-  // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
+// Render 404 page for any unmatched routes
+// app.get("*", function(req, res) {
+//   res.render("404");
+// });
 
 
-  module.exports = router;
+module.exports = router;
